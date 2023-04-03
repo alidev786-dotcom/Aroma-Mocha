@@ -1,0 +1,136 @@
+﻿@model AromaMocha.Models.Customer
+@{ 
+    List<SelectListItem> gender = new List<SelectListItem>() ;
+    gender.Add(
+        new SelectListItem() { Text = "Male",Value = "Male"}
+    );
+    gender.Add(
+        new SelectListItem() { Text = "Female", Value = "Female" }
+    );
+    gender.Add(
+        new SelectListItem() { Text = "Other", Value = "Other" }
+    );
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Mocha</title>
+    <link rel="stylesheet" type="text/css" href="~/Static/css/Register.css">
+    <head profile="http://127.0.0.1:5500/Wesite1/home.html">
+        <link rel="icon" type="image/png" href="~/Static/images/logo5.png">
+
+        <script src="https://kit.fontawesome.com/10f6dbc809.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Section 1 for header and display front page -->
+
+        <section class="header">
+            <nav>
+                <!-- nav bar -->
+                <h3>Aroma Mocha</h3>
+                <div class="links">
+                    <ul>
+                        <!-- buttons in nav bar-->
+                        <li><a href="/Home/Index">Home</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == false)
+                        {
+                            <li><a href="/Home/About">About Us</a></li>
+                        }
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Reservation/Reservation">Reservations</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Reservation/Reservation">Reservation</a></li>
+                        }
+                        <li><a href="/Shop/Shop">Shop</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Admin/ShowFeedbacks">Feedbacks</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Contact/Contact">Contact us</a></li>
+                        }
+                        @if (Session["username"] == null)
+                        {
+                            <li><a href="/Register/Register">Register</a></li>
+                        }
+                        @if (Session["username"] != null)
+                        {
+                            <li><a href="/Home/Index">@Session["username"]</a></li>
+                            <li><a href="/Register/Logout">logout</a></li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- div for sign up form -->
+            <div class="form">
+
+                <h1>Sign Up</h1>
+
+                @using (Html.BeginForm("registerCustomer", "Signup", FormMethod.Post))
+                {
+                    @Html.TextBoxFor(t => Model.Name, new { type = "text", placeholder = "Enter Name", required = true })
+                    @Html.ValidationMessage("Name")
+
+                    @Html.TextBoxFor(t => Model.Email, new { type = "email", placeholder = "Enter Email" })
+                    @Html.ValidationMessage("Email")
+
+                    @Html.TextBoxFor(t => Model.Password, new { type = "password", placeholder = "Enter Password" })
+                    @Html.ValidationMessage("Password")
+                    @Html.TextBoxFor(t => Model.Address, new { placeholder = "Enter Address" })
+                    @Html.ValidationMessage("Address")
+
+
+                    @Html.TextBoxFor(t => Model.Contact, new { type = "number", placeholder = "Enter Contact", required = true })
+                    @Html.ValidationMessage("Contact")
+                    @Html.RadioButtonFor(t => Model.Gender, "Male", new { @class = "gender",required=true })
+
+                    <center><label for="gender"> Male </label></center><br>
+
+                    @Html.RadioButtonFor(t => Model.Gender, "Female", new { required=true})
+                    <center><label for="gender"> Female </label></center><br>
+                    <input type="submit" value="submit">
+
+                }
+
+            </div>
+            
+        </section>
+
+        <!-- section 2 for footer-->
+        <section class="footer">
+
+            <div class="foot">s
+                <div class="foot1">
+
+                    <h3>Aroma Mocha</h3>
+                    <i class="fas fa-map-marker-alt"></i>Mall Road, Lahore Pakistan.<br>
+
+                    <p>Call.  0123 456 78910</p>
+                    <p>Opening hours</p>
+                    <p>Monday to Sunday</p>
+                    <p>10:00 AM - 11:00 PM</p>
+                </div>
+
+                <div class="foot1">
+                    <br>
+                    <p class="media">Social Media Handles</p><br>
+                    <i class="fab fa-facebook-f"></i>Aroma Mocha<br>
+                    <i class="fab fa-instagram"></i>aroma.mocha<br>
+                    <i class="fa fa-envelope"></i>aroma.mocha@gmail.com
+
+                </div>
+            </div>
+            <hr>
+
+        </section>
+    </body>
+</html>

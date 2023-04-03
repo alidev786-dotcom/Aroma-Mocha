@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Mocha</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Static/css/Register.css">
+    <head profile="http://127.0.0.1:5500/Wesite1/home.html">
+        <link rel="icon" type="image/png" href="~/Static/images/logo5.png">
+
+        <script src="https://kit.fontawesome.com/10f6dbc809.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Section 1 for header and display front page -->
+
+        <section class="header">
+            <nav>
+                <!-- nav bar -->
+                <h3>Aroma Mocha</h3>
+                <div class="links">
+                    <ul>
+                        <!-- buttons in nav bar-->
+                        <li><a href="/Home/Index">Home</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == false)
+                        {
+                            <li><a href="/Home/About">About Us</a></li>
+                        }
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Reservation/Reservation">Reservations</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Reservation/Reservation">Reservation</a></li>
+                        }
+                        <li><a href="/Shop/Shop">Shop</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Admin/ShowFeedbacks">Feedbacks</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Contact/Contact">Contact us</a></li>
+                        }
+                        @if (Session["username"] == null)
+                        {
+                            <li><a href="/Register/Register">Register</a></li>
+                        }
+                        @if (Session["username"] != null)
+                        {
+                            <li><a href="/Home/Index">@Session["username"]</a></li>
+                            <li><a href="/Register/Logout">logout</a></li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- div for login form -->
+
+            <div class="form" style="height:450px">
+
+                <h1>Admin Login Here</h1>
+                @if (ViewBag.invalidCredentials == true)
+                {
+                    <center><h3 style="color:red">Invalid Credentials</h3></center>
+                }
+
+                @using (Html.BeginForm("LoginAdmin", "Admin", FormMethod.Post))
+                {
+                    <div class="formdesign" id="uname">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                    <div class="formdesign" id="pass">
+                        <input type="password" name="password" placeholder="Password" required>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                    <div class="login">
+                        <input type="submit" value="LOGIN">
+                    </div>
+                }
+            </div>
+        </section>
+
+        <!-- section 2 for footer-->
+        <section class="footer">
+
+            <div class="foot">
+                <div class="foot1">
+
+                    <h3>Aroma Mocha</h3>
+                    <i class="fas fa-map-marker-alt"></i>Mall Road, Lahore Pakistan.<br>
+
+                    <p>Call.  0123 456 78910</p>
+                    <p>Opening hours</p>
+                    <p>Monday to Sunday</p>
+                    <p>10:00 AM - 11:00 PM</p>
+                </div>
+
+                <div class="foot1">
+                    <br>
+                    <p class="media">Social Media Handles</p><br>
+                    <i class="fab fa-facebook-f"></i>Aroma Mocha<br>
+                    <i class="fab fa-instagram"></i>aroma.mocha<br>
+                    <i class="fa fa-envelope"></i>aroma.mocha@gmail.com
+
+                </div>
+            </div>
+            <hr>
+
+        </section>
+    </body>
+    <script>
+
+function seterror(id, error){
+
+    element= document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+}
+
+function validateForm(){
+
+    var returnval=true;
+
+    var name= document.forms['myform']["uname"].value;
+    if(name.length<5){
+        seterror("name", "*Username is too short");
+        returnval= false;
+    }
+
+}
+
+    </script>
+</html>

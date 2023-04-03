@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Mocha</title>
+    <link rel="stylesheet" type="text/css" href="~/Static/css/Menu.css">
+    <head profile="http://127.0.0.1:5500/home.html">
+        <link rel="icon" type="image/png" href="~/Static/images/logo5.png">
+
+        <script src="https://kit.fontawesome.com/10f6dbc809.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Section 1 for header and display front page -->
+
+        <section class="header">
+            <nav>
+                <!-- nav bar -->
+                <h3>Aroma Mocha</h3>
+                <div class="links">
+                    <ul>
+                        <!-- buttons in nav bar-->
+                        <li><a href="/Home/Index">Home</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == false)
+                        {
+                            <li><a href="/Home/About">About Us</a></li>
+                        }
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Reservation/Reservation">Reservations</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Reservation/Reservation">Reservation</a></li>
+                        }
+                        <li><a href="/Shop/Shop">Shop</a></li>
+                        @if (Convert.ToBoolean(Session["isAdmin"]) == true)
+                        {
+                            <li><a href="/Admin/ShowFeedbacks">Feedbacks</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="/Contact/Contact">Contact us</a></li>
+                        }
+                        @if (Session["username"] == null)
+                        {
+                            <li><a href="/Register/Register">Register</a></li>
+                        }
+                        @if (Session["username"] != null)
+                        {
+                            <li><a href="/Home/Index">@Session["username"]</a></li>
+                            <li><a href="/Register/Logout">logout</a></li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- div for title at the center of the page -->
+
+            <div class="title">
+                <h3> MENU </h3><br>
+                <p><i>Food for the body is not enough. There must be food for the soul. </i></p>
+            </div>
+
+        </section>
+
+        <!-- Section 2 to display menu -->
+
+        <section class="offers">
+
+
+            <h1>Pakistani  Desi  Foods</h1>
+            <div class="row">
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN QORMA  </span>
+                        <span id="dash">-------------------------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">KHEER</span>
+                        <span id="dash">-------------------------------------------------------------------------   </span>
+                        <span id="price">Rs. 800</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN BIRYANI</span>
+                        <span id="dash">------------------------------------------------------   </span>
+                        <span id="price">Rs. 200</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHANA CHAT</span>
+                        <span id="dash">--------------------------------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                </div>
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">NIHARI  </span>
+                        <span id="dash">-------------------------------------------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">LEMONADE</span>
+                        <span id="dash">-----------------------------------------------------------------   </span>
+                        <span id="price">Rs. 350</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">HALWA PURI</span>
+                        <span id="dash">---------------------------------------------------------------   </span>
+                        <span id="price">Rs. 200</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">SEEKH KABAB</span>
+                        <span id="dash">------------------------------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 2ND MENU -->
+
+            <h1>Chinese Cuisine</h1>
+            <div class="row">
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN FRIED RICE </span>
+                        <span id="dash">-------------------------------------------------   </span>
+                        <span id="price">Rs. 400</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">PASTA</span>
+                        <span id="dash">--------------------------------------------------------------------------   </span>
+                        <span id="price">Rs. 150</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHOW MEIN</span>
+                        <span id="dash">----------------------------------------------------------------   </span>
+                        <span id="price">Rs. 200</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">HOT AND SOUR SOUP</span>
+                        <span id="dash">------------------------------------------------   </span>
+                        <span id="price">Rs. 300</span>
+                    </div>
+
+                </div>
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">SWEET AND SOUR CHICKEN  </span>
+                        <span id="dash">-------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHILLI DRY</span>
+                        <span id="dash">------------------------------------------------------------------   </span>
+                        <span id="price">Rs. 350</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN SHASHLIK</span>
+                        <span id="dash">---------------------------------------------------   </span>
+                        <span id="price">Rs. 200</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN MANCHURIAN</span>
+                        <span id="dash">---------------------------------------------   </span>
+                        <span id="price">Rs. 500</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3rd MENU -->
+
+            <h1>Fast Food</h1>
+            <div class="row">
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN SHAMI BURGER </span>
+                        <span id="dash">------------------------------------------   </span>
+                        <span id="price">Rs. 150</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">ZINGER BURGER</span>
+                        <span id="dash">---------------------------------------------------------   </span>
+                        <span id="price">Rs. 250</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN SHAWARMA</span>
+                        <span id="dash">-------------------------------------------------   </span>
+                        <span id="price">Rs. 250</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN FAJITA PIZZA</span>
+                        <span id="dash">-----------------------------------------------   </span>
+                        <span id="price">Rs. 900</span>
+                    </div>
+
+                </div>
+
+                <div class="menu">
+
+                    <div class="dish">
+                        <span id="dish">FRIED CHICKEN  </span>
+                        <span id="dash">----------------------------------------------------------   </span>
+                        <span id="price">Rs. 600</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CLUB SANDWICH</span>
+                        <span id="dash">--------------------------------------------------------   </span>
+                        <span id="price">Rs. 400</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">CHICKEN CHARGA</span>
+                        <span id="dash">------------------------------------------------------   </span>
+                        <span id="price">Rs. 650</span>
+                    </div>
+
+                    <div class="dish">
+                        <span id="dish">FRENCH FRIES</span>
+                        <span id="dash">------------------------------------------------------------   </span>
+                        <span id="price">Rs. 100</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- section 3 for footer -->
+        <section class="footer">
+
+            <div class="foot">
+                <div class="foot1">
+
+                    <h3>Aroma Mocha</h3>
+                    <i class="fas fa-map-marker-alt"></i>Mall Road, Lahore Pakistan.<br>
+
+                    <p>Call.  0123 456 78910</p>
+                    <p>Opening hours</p>
+                    <p>Monday to Sunday</p>
+                    <p>10:00 AM - 11:00 PM</p>
+                </div>
+
+                <div class="foot1">
+                    <br>
+                    <p class="media">Social Media Handles</p><br>
+                    <i class="fab fa-facebook-f"></i>Aroma Mocha<br>
+                    <i class="fab fa-instagram"></i>aroma.mocha<br>
+                    <i class="fa fa-envelope"></i>aroma.mocha@gmail.com
+
+                </div>
+            </div>
+            <hr>
+
+        </section>
+    </body>
+</html> 

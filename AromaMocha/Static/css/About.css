@@ -1,0 +1,219 @@
+﻿/* =============================================================
+================================================================
+
+                    About us page designing
+            
+================================================================
+================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 1300px;
+    margin: auto;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.8)),url("../images/1.jpg");
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgb(44, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+    nav h3 {
+        color: white;
+        float: left;
+        margin-left: 50px;
+        font-size: 25px;
+        font-family: 'Parisienne', cursive;
+        border-style: double;
+        border-width: 5px 5px;
+        padding: 5px 15px;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+    ul li {
+        display: inline-block;
+    }
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    ;
+    margin: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid rgba(138, 135, 135, 0.822);
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    background-color: #f5e23a;
+    border: 1px solid #f5e23a;
+    color: black;
+    font-weight: 25px;
+    transition: 0.8 ease;
+}
+
+.active {
+    background-color: #f5e23a;
+    font-size: 19px;
+    color: black;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .title h3 {
+        font-family: "Pacifico";
+        color: #faeb61;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 25%;
+    }
+
+    .title p i {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-align: center;
+        margin-left: 3px;
+    }
+
+/* section 2 css */
+.about {
+    background: rgb(240, 234, 207);
+}
+
+.since h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 60px;
+    color: darkgoldenrod;
+    font-family: sans-serif;
+}
+
+.since h2 {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: black;
+    font-family: serif;
+}
+
+.since p {
+    color: black;
+    font-family: "Arial";
+    text-align: center;
+    font-size: 18px;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 30px;
+    padding-bottom: 150px;
+}
+
+.butten {
+    border: 1px solid rgb(216, 43, 43);
+    background: rgb(216, 43, 43);
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    padding: 5px 18px;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+
+    .butten h1 a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .butten:hover {
+        background-color: #D51010;
+    }
+
+/* section 3---> footer */
+.footer {
+    background: rgb(44, 37, 37);
+    padding-bottom: 45px;
+}
+
+.foot h3 {
+    color: rgb(212, 173, 66);
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.foot p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.media {
+    padding-top: 25px;
+}
+
+.footer hr {
+    width: 40%;
+    float: left;
+    margin-left: 29%;
+    border: 1px solid rgb(141, 135, 127);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.foot1 {
+    padding: 20px 5px;
+    background: rgb(44, 37, 37);
+    border-radius: 6px;
+    flex-basis: 35%;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2px;
+}
+
+
+    .foot1 i {
+        color: white;
+        font-size: 23px;
+        padding-right: 17px;
+        line-height: 1.4;
+    }
+
+    .foot1, .foot1 p {
+        color: white;
+        font-size: 20px;
+    }

@@ -1,0 +1,243 @@
+﻿/* =============================================================
+================================================================
+
+                    shop page designing
+            
+================================================================
+================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 1300px;
+    margin: auto;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.7)),url( "../images/c.jpg");
+    position: relative;
+    width: 100%;
+    background-position: bottom;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgb(44, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+    nav h3 {
+        color: white;
+        float: left;
+        margin-left: 50px;
+        font-size: 25px;
+        font-family: 'Parisienne', cursive;
+        border-style: double;
+        border-width: 5px 5px;
+        padding: 5px 15px;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+    ul li {
+        display: inline-block;
+    }
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    ;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid rgba(138, 135, 135, 0.822);
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    background-color: #f5e23a;
+    border: 1px solid #f5e23a;
+    color: black;
+    font-weight: 25px;
+    transition: 0.8 ease;
+}
+
+.active {
+    background-color: #f5e23a;
+    font-size: 19px;
+    color: black;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .title h3 {
+        font-family: "Pacifico";
+        color: #faeb61;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 25%;
+    }
+
+    .title p i {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+/* section 2 css */
+.offers h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    word-spacing: 5px;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: rgb(82, 83, 83);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container {
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    background: rgb(226, 231, 200);
+    width: 25%;
+    height: 320px;
+    display: grid;
+    border: 6px solid #ccc;
+    display: inline-block;
+    margin: 40px;
+    box-shadow: 2px 2px 12px #dab141;
+}
+
+    .cards:hover {
+        /* box-shadow: 2px 2px 19px black; */
+        box-shadow: 1px 2px 13px rgb(104, 96, 96);
+    }
+
+.image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 180px;
+}
+
+.desc {
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#Rs {
+    font-weight: bold;
+}
+
+.desc p {
+    font-size: 20px;
+}
+
+.button {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 30px;
+}
+
+    .button a {
+        border: 1px solid rgb(243, 49, 49);
+        background: rgb(243, 49, 49);
+        color: white;
+        padding: 7px 95px;
+        transition: 0.4s;
+        font-size: 20px;
+        text-decoration: none;
+        margin-bottom: 12px;
+    }
+
+a:hover {
+    background-color: #D51010;
+}
+
+/* section 3---> footer */
+.footer {
+    background: rgb(44, 37, 37);
+    padding-bottom: 45px;
+}
+
+.foot h3 {
+    color: rgb(212, 173, 66);
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.foot p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.media {
+    padding-top: 25px;
+}
+
+.footer hr {
+    width: 40%;
+    float: left;
+    margin-left: 29%;
+    border: 1px solid rgb(141, 135, 127);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.foot1 {
+    padding: 20px 5px;
+    background: rgb(44, 37, 37);
+    border-radius: 6px;
+    flex-basis: 35%;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2px;
+}
+
+
+    .foot1 i {
+        color: white;
+        font-size: 23px;
+        padding-right: 17px;
+        line-height: 1.4;
+    }
+
+    .foot1, .foot1 p {
+        color: white;
+        font-size: 20px;
+    }

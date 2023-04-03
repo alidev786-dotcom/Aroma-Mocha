@@ -1,0 +1,289 @@
+﻿/* =============================================================
+================================================================
+
+                    About us page designing
+            
+================================================================
+================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 1300px;
+    margin: auto;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.7)),url("../images/3.jpg");
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgb(44, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+    nav h3 {
+        color: white;
+        float: left;
+        margin-left: 50px;
+        font-size: 25px;
+        font-family: 'Parisienne', cursive;
+        border-style: double;
+        border-width: 5px 5px;
+        padding: 5px 15px;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+    ul li {
+        display: inline-block;
+    }
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    ;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid rgba(138, 135, 135, 0.822);
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    background-color: #f5e23a;
+    border: 1px solid #f5e23a;
+    color: black;
+    font-weight: 25px;
+    transition: 0.8 ease;
+}
+
+.active {
+    background-color: #f5e23a;
+    font-size: 19px;
+    color: black;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .title h3 {
+        font-family: "Pacifico";
+        color: #faeb61;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 25%;
+    }
+
+    .title p i {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin-left: 17%;
+    }
+
+
+/* section 2 css */
+.contact {
+    background: rgb(240, 234, 207);
+}
+
+.row {
+    display: flex;
+    padding: 7% 17% 7% 17%;
+    /* justify-content: space-between;  */
+}
+
+.menu {
+    padding-top: 100px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    height: 580px;
+    width: 420px;
+    box-sizing: border-box;
+    background: #535252;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+    .menu p b {
+        font-size: 27px;
+        color: rgb(253, 218, 101);
+    }
+
+.handles {
+    font-weight: normal;
+    font-size: 19px;
+    color: white;
+}
+
+.menu p {
+    color: white;
+    line-height: 1.4;
+    font-size: 19px;
+    font-family: "Pacifico";
+}
+
+/* contact form styling */
+.form {
+    height: 580px;
+    width: 440px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    box-sizing: border-box;
+    background: white;
+    padding: 40px 40px;
+    /* margin-left: 30%; */
+}
+
+    .form h1 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .form input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form p {
+        font-size: 17px;
+        line-height: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .form input[type= text], .form input[type= email] {
+        border-bottom: 1px solid rgb(63, 58, 58);
+        background: transparent;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        color: rgb(61, 59, 59);
+        height: 30px;
+        font-size: 14px;
+        outline: none;
+        opacity: 1;
+        padding-left: 2px;
+    }
+
+textarea {
+    background: transparent;
+    border: 2px solid rgb(146, 144, 144);
+    color: black;
+    height: 80px;
+    width: 96%;
+    padding: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 15px;
+    opacity: 1;
+    margin-bottom: 20px;
+    resize: none;
+    border-radius: 6px;
+}
+/* submit button styling */
+
+.form input[type= submit] {
+    color: white;
+    background: rgb(60, 116, 153);
+    font-size: 18px;
+    border: none;
+    height: 40px;
+    font-family: serif;
+    margin-bottom: 40px;
+    transition: 0.6s;
+    border-radius: 4px;
+}
+
+    .form input[type= submit]:hover {
+        background: rgb(4, 100, 165);
+    }
+
+    .form input[type= submit]:hover {
+        cursor: pointer;
+    }
+
+.send {
+    width: 38%;
+}
+
+/* section 3---> footer */
+.footer {
+    background: rgb(44, 37, 37);
+    padding-bottom: 45px;
+}
+
+.foot h3 {
+    color: rgb(212, 173, 66);
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.foot p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.media {
+    padding-top: 25px;
+}
+
+.footer hr {
+    width: 40%;
+    float: left;
+    margin-left: 29%;
+    border: 1px solid rgb(141, 135, 127);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.foot1 {
+    padding: 20px 5px;
+    background: rgb(44, 37, 37);
+    border-radius: 6px;
+    flex-basis: 35%;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2px;
+}
+
+
+    .foot1 i {
+        color: white;
+        font-size: 23px;
+        padding-right: 17px;
+        line-height: 1.4;
+    }
+
+    .foot1, .foot1 p {
+        color: white;
+        font-size: 20px;
+    }

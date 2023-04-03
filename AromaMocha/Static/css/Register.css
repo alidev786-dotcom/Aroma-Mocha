@@ -1,0 +1,262 @@
+﻿/* registration form nav and back ground*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 1300px;
+    margin: auto;
+    height: 120vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)),url("../images/2.jpg");
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgb(44, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+    nav h3 {
+        color: white;
+        float: left;
+        margin-left: 50px;
+        font-size: 25px;
+        font-family: 'Parisienne', cursive;
+        border-style: double;
+        border-width: 5px 5px;
+        padding: 5px 15px;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+    ul li {
+        display: inline-block;
+    }
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    ;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid rgba(138, 135, 135, 0.822);
+    transition: 0.9s;
+}
+
+ul li a:hover {
+    background-color: #f5e23a;
+    border: 1px solid #f5e23a;
+    color: black;
+    font-weight: 25px;
+    transition: 0.7s;
+}
+
+.active {
+    background-color: #f5e23a;
+    color: black;
+    font-size: 19px;
+}
+/* Form styling */
+
+.form {
+    width: 420px;
+    height: 600px;
+    color: white;
+    margin-top: 1px;
+    top: 50%;
+    left: 50%;
+    background: rgb(59, 50, 50);
+    padding: 60px 30px;
+    box-sizing: border-box;
+    box-shadow: 28px 28px 70px #000;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+    .form span b {
+        margin-left: 65%;
+        margin-top: 2px;
+    }
+
+    .form h1 {
+        text-align: center;
+        font-family: sans-serif;
+        /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        margin-bottom: 30px;
+        font-size: 25px;
+        ;
+    }
+
+    .form input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .form input[type= text], .form input[type= password], .form input[type= email], .form input[type=number]{
+            border: none;
+            color: white;
+            border-bottom: 1px solid rgb(236, 232, 232);
+            background: transparent;
+            height: 30px;
+            font-size: 15px;
+            outline: none;
+            opacity: 1;
+        }
+
+/* bottom text  input and a styling */
+
+.bottom-text {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+    .bottom-text input {
+        width: 8%;
+    }
+
+    .bottom-text a {
+        float: right;
+        color: rgb(207, 204, 204);
+        margin-right: 12px;
+    }
+
+        .bottom-text a:hover {
+            color: white;
+            transition: 0.4s;
+        }
+
+    .bottom-text input[type= checkbox] {
+        float: left
+    }
+
+/* gender styling */
+.gender {
+    font-size: 18px;
+}
+
+    .gender input {
+        margin-left: 2px;
+        width: 12%;
+        margin-bottom: 40px;
+    }
+
+/* login button styling */
+
+.form input[type= submit] {
+    color: white;
+    background: rgb(206, 165, 33);
+    font-size: 20px;
+    border: none;
+    height: 40px;
+    font-family: serif;
+    margin-bottom: 20px;
+    transition: 0.4s;
+    ;
+}
+
+    .form input[type= submit]:hover {
+        background: rgb(224, 175, 13);
+    }
+
+    .form input[type= submit]:hover {
+        cursor: pointer;
+    }
+
+/* bottom text 2 styling */
+
+.bottom-text2 {
+    font-size: 17px;
+}
+
+    .bottom-text2 a {
+        float: right;
+        font-size: 18px;
+        color: rgb(115, 146, 230);
+    }
+
+        .bottom-text2 a:hover {
+            color: rgb(114, 180, 246);
+            transition: 0.5s;
+        }
+
+
+/* section 2---> footer */
+.footer {
+    background: rgb(44, 37, 37);
+    padding-bottom: 45px;
+}
+
+.foot h3 {
+    color: rgb(212, 173, 66);
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.foot p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.media {
+    padding-top: 25px;
+}
+
+.footer hr {
+    width: 40%;
+    float: left;
+    margin-left: 29%;
+    border: 1px solid rgb(141, 135, 127);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.foot1 {
+    padding: 20px 5px;
+    background: rgb(44, 37, 37);
+    border-radius: 6px;
+    flex-basis: 35%;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2px;
+}
+
+
+    .foot1 i {
+        color: white;
+        font-size: 23px;
+        padding-right: 17px;
+        line-height: 1.4;
+    }
+
+    .foot1, .foot1 p {
+        color: white;
+        font-size: 20px;
+    }

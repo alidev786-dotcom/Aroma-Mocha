@@ -1,0 +1,238 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 1300px;
+    margin: auto;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.5)),url("../images/12.jfif");
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgb(44, 37, 37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+    nav h3 {
+        color: white;
+        float: left;
+        margin-left: 50px;
+        font-size: 25px;
+        font-family: 'Parisienne', cursive;
+        border-style: double;
+        border-width: 5px 5px;
+        padding: 5px 15px;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+    ;
+}
+
+    ul li {
+        display: inline-block;
+    }
+
+nav ul li a {
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    ;
+    margin: 5px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px solid rgba(138, 135, 135, 0.822);
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    background-color: #f5e23a;
+    border: 1px solid #f5e23a;
+    color: black;
+    font-weight: 25px;
+}
+
+.active {
+    background-color: #f5e23a;
+    font-size: 19px;
+    color: black;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .title h3 {
+        font-family: "Pacifico";
+        color: #faeb61;
+        font-size: 50px;
+    }
+
+    .title p i {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-align: center;
+        margin-left: 9%;
+        ;
+    }
+
+.butten {
+    border: 1px solid rgb(216, 43, 43);
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    padding: 5px 18px;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+    background-color: #f11a1a;
+}
+
+    .butten h1 a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .butten:hover {
+        background-color: #D51010;
+    }
+/* section 2 --> menu choices*/
+
+.offers {
+    /* background: rgb(240, 234, 207);; */
+    background: #e4dfc6;
+}
+
+div h2 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.offers div p i {
+    text-align: center;
+    margin-left: 38%;
+    ;
+    font-size: 20px;
+    color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.menu {
+    padding: 20px 10px;
+    background: rgb(31, 30, 30);
+    /* #af5f5f; */
+    border-radius: 6px;
+    flex-basis: 31%;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10%;
+    margin-top: 2px;
+}
+
+    .menu:hover {
+        box-shadow: 5px 0px 10px 5px rgba(92, 80, 80, 0.5);
+        transition: 0.3s;
+    }
+
+    .menu p {
+        padding: 3px;
+        color: WHITE;
+        font-size: 18px;
+    }
+
+        .menu p b {
+            font-size: 24px;
+            color: rgb(253, 218, 101);
+        }
+/* section 3---> footer */
+.footer {
+    background: rgb(44, 37, 37);
+    padding-bottom: 45px;
+}
+
+.foot h3 {
+    color: rgb(212, 173, 66);
+    text-align: center;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.foot p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.media {
+    padding-top: 25px;
+}
+
+.footer hr {
+    width: 40%;
+    float: left;
+    margin-left: 29%;
+    border: 1px solid rgb(141, 135, 127);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.foot1 {
+    padding: 20px 1px;
+    background: rgb(44, 37, 37);
+    border-radius: 6px;
+    flex-basis: 35%;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2px;
+}
+
+
+    .foot1 i {
+        color: white;
+        font-size: 23px;
+        padding-right: 17px;
+        line-height: 1.4;
+    }
+
+    .foot1, .foot1 p {
+        color: white;
+        font-size: 20px;
+    }
